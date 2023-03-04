@@ -12,11 +12,6 @@ const Products = () => {
       price: 100.69,
     },
     {
-      src: leatherCasual,
-      title: 'Casual Leather Jacket',
-      price: 70.99,
-    },
-    {
       src: greyWarm,
       title: 'Grey Puffer Jacket',
       price: 84.39,
@@ -33,20 +28,28 @@ const Products = () => {
     },
   ];
 
-  let display;
-  for (let i = 0; i < images.length; i++) {
-    display = images[i];
-  }
-
   return (
     <div>
-      <div>
+      <div className="product-btns-container">
         <button className="product-btns">
-          <figure>
-            <img src={display.src} alt={display.title} />
-          </figure>
-          <title>{display.title}</title>
-          <price>{display.price}</price>
+          <img className="display-src" src={images[0].src} alt="" />
+          <div className="display-price">${images[0].price}</div>
+          <div className="display-title">{images[0].title}</div>
+        </button>
+        <button className="product-btns">
+          <img className="display-src" src={images[1].src} alt="" />
+          <div className="display-price">${images[1].price}</div>
+          <div className="display-title">{images[1].title}</div>
+        </button>
+        <button className="product-btns">
+          <img className="display-src" src={images[2].src} alt="" />
+          <div className="display-price">${images[2].price}</div>
+          <div className="display-title">{images[2].title}</div>
+        </button>
+        <button className="product-btns">
+          <img className="display-src" src={images[3].src} alt="" />
+          <div className="display-price">${images[3].price}</div>
+          <div className="display-title">{images[3].title}</div>
         </button>
       </div>
     </div>
